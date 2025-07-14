@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeonghyeon Kim | Personal Portfolio</title>
+    <title>Jeonghyeon Kim</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
         Chosen Palette: Warm Neutrals
         Application Structure Plan: A single-page, vertical layout with a sticky navigation header for easy access to different content sections (About, Research, Publications, Awards). This structure is ideal for a personal portfolio as it allows a user to quickly scan the entire profile or jump directly to a section of interest. The flow is logical: a high-level introduction first, followed by detailed research interests, a list of publications, and a chronological display of achievements. This prioritizes clarity and user experience over a rigid, chapter-like structure.
         Visualization & Content Choices: 
-        - About/Hero: Goal: Inform. Method: Clear, concise text block to establish identity.
+        - About/Hero: Goal: Inform. Method: Clear, concise text block next to a profile image to establish identity.
         - Research Interests: Goal: Organize & Inform. Method: A single-column layout using landscape cards to present the two distinct research areas, allowing for focused reading. Badges highlight key achievements. Implemented with HTML/Tailwind.
         - Publications: Goal: Organize & Inform. Method: A clean, vertical list of publications, with the user's name bolded for emphasis, a badge for the award-winning paper, and clear links to resources (DOI, Paper, Artifacts). Implemented with HTML/Tailwind.
         - Awards & News: Goal: Show Change/Progression. Method: A vertical timeline to chronologically display achievements in a visually engaging manner. Implemented with HTML/Tailwind and CSS pseudo-elements.
@@ -109,25 +109,34 @@
 
         <!-- About Section -->
         <section id="about" class="min-h-[calc(100vh-4rem)] flex items-center py-16">
-            <div class="w-full">
-                <h1 class="text-4xl md:text-6xl font-bold text-slate-800 leading-tight">Jeonghyeon Kim</h1>
-                <div class="mt-8 text-lg md:text-xl text-slate-600 max-w-3xl space-y-4">
-                    <p>
-                        I am a Master’s degree candidate at the <a href="https://www.kaist.ac.kr" target="_blank" class="text-teal-600 hover:underline font-medium">KAIST Graduate School of AI Semiconductor</a>, currently advised by Prof. Jongse Park in the School of Computing. From March 2024 to July 2025, I was fortunate to be advised by Prof. Jeehoon Kang in the Concurrency and Parallelism Laboratory. I earned my Bachelor’s degree in Computer Science from the University of Seoul, graduating as the <strong class="text-slate-700">Salutatorian</strong> (Second Highest Distinction).
-                    </p>
-                    <p>
-                        My research interests lie at the intersection of concurrent systems and formal methods. I focus on developing practical <strong>concurrent memory reclamation</strong> techniques and <strong>formally verifying</strong> the correctness of critical distributed systems. You can find more details about my projects below.
-                    </p>
+            <div class="w-full flex flex-col-reverse md:flex-row items-center gap-12 lg:gap-16">
+                <div class="md:w-2/3">
+                    <h1 class="text-4xl md:text-6xl font-bold text-slate-800 leading-tight">Jeonghyeon Kim</h1>
+                    <div class="mt-8 text-lg md:text-xl text-slate-600 max-w-3xl space-y-4">
+                        <p>
+                            I am a <strong class="text-slate-700">Master’s degree candidate</strong> at the <a href="https://www.kaist.ac.kr" target="_blank" class="text-teal-600 hover:underline font-medium">KAIST Graduate School of AI Semiconductor</a>, currently advised by <a href="https://jongse-park.github.io/" target="_blank" class="text-teal-600 hover:underline font-medium">Prof. Jongse Park</a> in the School of Computing. From March 2024 to July 2025, I was fortunate to be advised by <a href="https://cp.kaist.ac.kr/jeehoon.kang/" target="_blank" class="text-teal-600 hover:underline font-medium">Prof. Jeehoon Kang</a> in the Concurrency and Parallelism Laboratory. I earned my Bachelor’s degree in Computer Science from the University of Seoul, graduating as the Salutatorian (Second Highest Distinction).
+                        </p>
+                        <p>
+                            My research interests lie at the intersection of concurrent systems and formal methods. I focus on developing practical <strong>concurrent memory reclamation</strong> techniques and <strong>formally verifying</strong> the correctness of critical distributed systems. You can find more details about my projects below.
+                        </p>
+                    </div>
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <a href="mailto:jeonghyeon.kim@kaist.ac.kr" class="inline-flex items-center gap-2 bg-teal-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-teal-700 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            Email Me
+                        </a>
+                        <a href="https://orcid.org/0009-0000-7070-3578" target="_blank" class="inline-flex items-center gap-2 bg-slate-200 text-slate-700 font-semibold py-2 px-5 rounded-lg hover:bg-slate-300 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/><circle cx="12" cy="10" r="3"/><circle cx="12" cy="12" r="10"/></svg>
+                            ORCID
+                        </a>
+                        <a href="files/cv.pdf" target="_blank" class="inline-flex items-center gap-2 bg-slate-200 text-slate-700 font-semibold py-2 px-5 rounded-lg hover:bg-slate-300 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            CV
+                        </a>
+                    </div>
                 </div>
-                <div class="mt-10 flex flex-wrap gap-4">
-                    <a href="mailto:jeonghyeon.kim@kaist.ac.kr" class="inline-flex items-center gap-2 bg-teal-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-teal-700 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        Email Me
-                    </a>
-                    <a href="https://orcid.org/0009-0000-7070-3578" target="_blank" class="inline-flex items-center gap-2 bg-slate-200 text-slate-700 font-semibold py-2 px-5 rounded-lg hover:bg-slate-300 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/><circle cx="12" cy="10" r="3"/><circle cx="12" cy="12" r="10"/></svg>
-                        ORCID
-                    </a>
+                <div class="md:w-1/3 flex-shrink-0">
+                    <img src="images/profile.jpg" alt="Jeonghyeon Kim profile picture" class="rounded-lg shadow-lg w-full max-w-xs mx-auto md:max-w-none">
                 </div>
             </div>
         </section>
